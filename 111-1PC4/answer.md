@@ -1,12 +1,12 @@
 ﻿# 第4次練習-練習-PC4
 >
->學號：1234567 
+>學號：109111136
 ><br />
->姓名：王小明 
+>姓名：李俊賢
 ><br />
->作業撰寫時間：180 (mins，包含程式撰寫時間)
+>作業撰寫時間：30 (mins，包含程式撰寫時間)
 ><br />
->最後撰寫文件日期：2022/10/12
+>最後撰寫文件日期：2022/9/29
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -14,19 +14,61 @@
 - [x]個人認為完成作業須具備觀念
 
 ## 說明程式與內容
+下段程式碼則為使用後結果：test是利用Age判斷
 
-開始寫說明，該說明需說明想法，
-並於之後再對上述想法的每一部分將程式進一步進行展現，
-若需引用程式區則使用下面方法，
-若為.cs檔內程式除了於敘述中需註明檔案名稱外，
-還需使用語法` ```csharp 程式碼 ``` `，
-下段程式碼則為使用後結果：
+    protected void Page_Load(object sender, EventArgs e)
+        {
+            int i_Age = 1;
+            int i_Sex = 0;
+            if (i_Age >= 50)
+            {
+                if (i_Sex == 0)
+                {
+                    Response.Write("壯年女人");
+                }
+                else
+                {
+                    Response.Write("壯年男人");
+                }
+            }
+            else
+            {
+                if (i_Sex == 0)
+                {
+                    Response.Write("年輕女人");
+                }
+                else
+                {
+                    Response.Write("年輕男人");
+                }
+            }
+        }
 
-```csharp
-public void mt_getResult(){
-    ...
-}
-```
+    protected void Page_Load(object sender, EventArgs e)
+        {
+            int i_Age = 1;
+            int i_Sex = 0;
+            if (!(!(i_Age >= 50) || !(i_Sex == 1)))
+            {
+                Response.Write("壯年男人");
+            }
+            else if (!(!(i_Age < 50) || !(i_Sex == 1)))
+            {
+                Response.Write("年輕男人");
+            }
+            else if (!(!(i_Age >= 50) || !(i_Sex == 0)))
+            {
+                Response.Write("壯年女人");
+            }
+            else if (!(!(i_Age < 50) || !(i_Sex == 0)))
+            {
+                Response.Write("年輕女人");
+            }
+            else
+            {
+                Response.Write("其他");
+            }
+        }
 
 若要於內文中標示部分.aspx檔，則使用以下標籤` ```html 程式碼 ``` `，
 下段程式碼則為使用後結果：
